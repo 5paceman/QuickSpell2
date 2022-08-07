@@ -25,7 +25,7 @@ namespace QuickSpell2
 
         public ArrayList spellButtons = new ArrayList();
 
-        private string savedFileName = "spells.json";
+        private string savedFileName = "spells.book";
         public MainForm()
         {
             InitializeComponent();
