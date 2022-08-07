@@ -6,5 +6,6 @@ This rewrite has infinite spells and the ability to color buttons.
 Find the latest compiled version in the [releases](https://github.com/5paceman/QuickSpell2/releases) section 
 
 ### Pictures
-![image](https://user-images.githubusercontent.com/16262127/183309623-675c3ace-4b43-4a67-b079-68336dca38a4.png)![image](https://user-images.githubusercontent.com/16262127/183309647-ee87990b-418b-4567-bb41-10bca1f62c87.png)
+![image](https://user-images.githubusercontent.com/16262127/183310989-29bf4856-bafe-48df-9fcc-ac9ecf1c573a.png)
+![image](https://user-images.githubusercontent.com/16262127/183309647-ee87990b-418b-4567-bb41-10bca1f62c87.png)
 
