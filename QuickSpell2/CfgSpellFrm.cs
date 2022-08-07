@@ -20,8 +20,17 @@ namespace QuickSpell2
             this.mainForm = mainForm;
 
             InitializeComponent();
+            List<int> customColors = new List<int>();
+            foreach (Button b in this.mainForm.spellButtons)
+            {
+                if (b.BackColor != SystemColors.Control)
+                {
+                    customColors.Add(ColorTranslator.ToOle(b.BackColor));
+                }
+            }
+            this.colorDialog1.CustomColors = customColors.ToArray();
 
-            if(isNewSpell)
+            if (isNewSpell)
             {
                 this.comboBoxSpells.Enabled = false;
             } else
@@ -81,10 +90,14 @@ namespace QuickSpell2
                     }
                 }
             }
+            this.Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            
+            this.colorDialog1.Color = this.colorPictureBox.BackColor;
+            
             if(this.colorDialog1.ShowDialog(this) == DialogResult.OK)
             {
                 this.colorPictureBox.BackColor = this.colorDialog1.Color;
