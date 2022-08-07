@@ -65,6 +65,7 @@ namespace QuickSpell2
             if(this.isNewSpell)
             {
                 this.mainForm.addSpell(this.textSpellName.Text, this.textSpellAction.Text, this.colorPictureBox.BackColor);
+                this.mainForm.SaveSpells();
                 this.Close();
             } else
             {
@@ -75,6 +76,7 @@ namespace QuickSpell2
                         b.Text = this.textSpellName.Text;
                         b.Tag = this.textSpellAction.Text;
                         b.BackColor = this.colorPictureBox.BackColor;
+                        this.mainForm.SaveSpells();
                         break;
                     }
                 }

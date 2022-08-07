@@ -24,6 +24,8 @@ namespace QuickSpell2
         public static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, uint wParam, [MarshalAs(UnmanagedType.LPWStr)] string lParam);
 
         public ArrayList spellButtons = new ArrayList();
+
+        private string savedFileName = "spells.json";
         public MainForm()
         {
             InitializeComponent();
@@ -32,10 +34,38 @@ namespace QuickSpell2
 
         private void LoadSavedSpells()
         {
-            string savedFileName = "spells.json";
+            if (File.Exists(savedFileName))
+            {
+                using (StreamReader sr = new StreamReader(savedFileName))
+                {
+                    string line;
+
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        string[] button = line.Split(':');
+                        if (button.Length == 3)
+                        {
+                            addSpell(button[0], button[1], Color.FromArgb(int.Parse(button[2])));
+                        }
+                    }
+                }
+            }
+        }
+
+        public void SaveSpells()
+        {
+            if (File.Exists(savedFileName))
+            {
+                File.Delete(savedFileName);
+            }
+            using (StreamWriter sr = new StreamWriter(File.Create(savedFileName)))
+            {
+                foreach(Button b in this.spellButtons)
+                {
+                    sr.WriteLine(b.Text + ":" + b.Tag + ":" + b.BackColor.ToArgb().ToString());
+                }
+            }
             
-
-
         }
 
         private string Left(string s, int count)
