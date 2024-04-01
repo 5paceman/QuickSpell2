@@ -1,6 +1,6 @@
 # QuickSpell2
-QuickSpell2 is a rewrite of the Meridian59 tool QuickSpell. It allows you to create hotkeys for Meridian59 spells however its limited to 10 spells is written in MFC and doesnt support coloring the buttons. 
-This rewrite has infinite spells and the ability to color buttons. 
+QuickSpell2 is a rewrite of the Meridian59 tool QuickSpell. It allows you to create hotkeys for Meridian59 spells but its limited to only allowing 10 spells, it's written in MFC and doesnt support coloring the buttons. 
+This rewrite has **infinite** spells and the ability to **color buttons**. 
 
 ### Download
 Find the latest compiled version in the [releases](https://github.com/5paceman/QuickSpell2/releases) section 
